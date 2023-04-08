@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(79, 122, 240);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p><strong>DOM</strong>(Document Object Model)</p>
+    <Div id = "msg">clique em mim</Div>
+    <script>
+        //imprimir uma menssagem
+        window.document.write("Hello, Word!  ")  
+    </script>
+
+    <script>
+        //imprimir o charset
+       window.document.write(window.document.charset + "  ")
+    </script>
+
+    <script>
+        //imprimir o navegador
+        window.document.write(window.navigator.appName + " ")
+    </script>
+
+    <script>
+        //imprimir a URL
+        window.document.write(window.document.URL)
+    </script>
+
+    <script>
+        //USO DO .GETELEMENTBYNAME...
+        var p1 = window.document.getElementsByTagName('p')[0]        
+        window.document.write("O paragrafo 1 está escrito assim: " + p1.innerText)
+        var p1 = window.document.getElementsByTagName('p')[1]        
+        window.document.write("O paragrafo 2 está escrito assim: \n " + p1.innerText)
+        p1.style.color = 'black'
+    </script>
+    
+    <script>
+        //USO DO .GETEMENTBYID...
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Essa DIV mudou!'*/
+    </script>
+
+    <SCRipt>
+        //USO DO .GETELEMENTBYNAME...
+        /*var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Essa DIV mudou de novo!'
+        d.style.background = 'green'*/
+    </SCRipt>
+
+    <script>
+        //USO DO .GETELEMENTQUERYSELECTOR...
+        var d = window.document.querySelector('div#msg')
+        d.innerText = "mais uma vez..."
+        d.style.background = 'green'
+    </script>
+</body>
+</html>
