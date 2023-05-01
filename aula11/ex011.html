@@ -15,9 +15,12 @@
 
         function verif(){
         var p = window.document.getElementById('txtpais')
-        var pais = Text(p.Value)
+        var pais = String(txtpais.value)
         var res = window.document.querySelector('div#res')
-        res.innerHTML = 'O seu país é: ' + pais
+        res.innerHTML = '<p>O seu país é: ' + pais + '. </p>'
+        if(pais == 'Brasil'){
+             res.innerHTML += 'você é Brasileiro!'
+        }else{res.innerHTML += 'você é estrangeiro!'}
         }
     </script>
 </body>
